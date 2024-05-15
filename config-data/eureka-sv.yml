@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: eureka-sv
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enable: true
+          LOWER-CASE-SERVICE-ID: true
+  cloud:
+    eureka:
+      client:
+        register-with-eureka: false
+        fetch-registry: false
+    instance:
+      lease-renewal-interval-in-seconds: 0
+
+server:
+  port: 8761
